@@ -10,18 +10,23 @@ body {
 header {
     background-color: #1e1e1e;
     text-align: center;
-    padding: 2em 0;
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3em;
+.logo {
+    max-width: 156px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 415 / 328;
 }
 
-header p {
-    margin: 0.5em 0 0;
-    font-size: 1.5em;
-    color: #cccccc;
+@media (max-width: 600px) {
+    .logo {
+        max-width: 96px;
+    }
 }
 
 nav {
@@ -105,5 +110,57 @@ footer {
     .gallery {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+.video-container {
+    margin-top: 2em;
+    width: 100%;
+    max-width: 400px; /* Match the max-width of screenshots */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #333333; /* Match the border of screenshots */
+}
+
+#the-dev {
+    margin-top: 2em;
+}
+
+.dev-content {
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.dev-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.dev-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #333333;
+}
+
+.dev-description {
+    flex: 2;
+}
+
+@media (max-width: 768px) {
+    .dev-content {
+        flex-direction: column;
+    }
+
+    .dev-image {
+        max-width: 100%;
     }
 }
