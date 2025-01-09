@@ -69,6 +69,15 @@ main p {
     color: #dddddd;
 }
 
+.gallery img,
+.gallery video {
+    width: 100%;
+    height: auto;
+    border: 2px solid #333333;
+    border-radius: 8px;
+}
+
+/* Other existing styles */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -79,13 +88,6 @@ main p {
 .gallery figure {
     margin: 0;
     max-width: 300px;
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-    border: 2px solid #333333;
-    border-radius: 8px;
 }
 
 .gallery figcaption {
